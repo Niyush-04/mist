@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <title>Mistos</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -10,8 +17,10 @@
     <!-- Navigation -->
     <nav id="navbar">
       <div class="nav-container">
-        <img class="logo" src="img/vector.svg" alt="logo">
-        <span class="brand-name">MistOS</span>
+        <a href="/" class="brand">
+          <img class="logo" src="img/vector.svg" alt="MistOS Logo" />
+          <span class="brand-name">MistOS</span>
+        </a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
@@ -26,18 +35,18 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-element">
-      <div class="hero-content">
-        <h1>Mistos</h1>
-        <p>
-          Experience Android like never before with our custom ROM based on
-          AOSP. Pure, fast, and feature-rich.
-        </p>
-        <div class="cta-buttons">
-          <a href="#download" class="btn-primary">Download Now</a>
-          <a href="#features" class="btn-secondary">Learn More</a>
+        <div class="hero-content">
+          <h1>Mistos</h1>
+          <p>
+            Experience Android like never before with our custom ROM based on
+            AOSP. Pure, fast, and feature-rich.
+          </p>
+          <div class="cta-buttons">
+            <a href="#download" class="btn-primary">Download Now</a>
+            <a href="#features" class="btn-secondary">Learn More</a>
+          </div>
         </div>
-      </div>
-      <img class="banner-image" src="img/banner-image.png" alt="">
+        <img class="banner-image" src="img/banner-image.png" alt="" />
       </div>
     </section>
 
@@ -68,6 +77,47 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Screenshot Carousel Section -->
+    <section class="screenshot-section">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- 8 screenshots -->
+          <div class="swiper-slide">
+            <img src="img/screenshot1.webp" alt="Screenshot 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot2.webp" alt="Screenshot 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot3.webp" alt="Screenshot 3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot4.webp" alt="Screenshot 4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot5.webp" alt="Screenshot 5" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot6.webp" alt="Screenshot 6" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot7.webp" alt="Screenshot 7" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/screenshot8.webp" alt="Screenshot 8" />
+          </div>
+        </div>
+
+        <!-- Swiper navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Swiper pagination -->
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -191,7 +241,7 @@
         </p>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

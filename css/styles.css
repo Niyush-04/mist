@@ -38,9 +38,9 @@ nav.scrolled {
 }
 
 .logo {
-  height: 40px;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
 }
 
 .brand-name {
@@ -51,7 +51,7 @@ nav.scrolled {
 }
 
 .logo:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -398,4 +398,64 @@ footer {
     .features-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* carousel */
+
+.screenshot-section {
+    padding: 4rem 2rem;
+    background: #0f0f1a;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #00fff7;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #00fff7;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 247, 0.6);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #00fff7;
+}
+
+.swiper-pagination-bullet {
+    background: #00fff7;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00fff7;
+    opacity: 1;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+}
+
+.swiper-slide {
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 247, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+    transition: transform 0.3s ease;
+    max-width: 300px;
 }
