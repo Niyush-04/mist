@@ -13,85 +13,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Light Theme */
-body.light-theme {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
-    color: #1a202c;
-}
-
-body.light-theme nav {
-    background: rgba(248, 250, 252, 0.9);
-}
-
-body.light-theme nav.scrolled {
-    background: rgba(248, 250, 252, 0.95);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-body.light-theme .nav-links a {
-    color: #1a202c;
-}
-
-body.light-theme .nav-links a:hover {
-    color: #00d4ff;
-}
-
-body.light-theme .theme-toggle {
-    border-color: rgba(26, 32, 44, 0.3);
-    color: #1a202c;
-}
-
-body.light-theme .theme-toggle:hover {
-    border-color: #00d4ff;
-}
-
-body.light-theme .hero::before {
-    background:
-        radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
-}
-
-body.light-theme .hero p {
-    color: #4a5568;
-}
-
-body.light-theme .btn-secondary {
-    color: #1a202c;
-    border-color: #1a202c;
-}
-
-body.light-theme .btn-secondary:hover {
-    background: #1a202c;
-    color: #ffffff;
-}
-
-body.light-theme .features {
-    background: rgba(26, 32, 44, 0.02);
-}
-
-body.light-theme .feature-card {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(26, 32, 44, 0.1);
-    backdrop-filter: blur(10px);
-}
-
-body.light-theme .feature-card p {
-    color: #4a5568;
-}
-
-body.light-theme footer {
-    background: #f8fafc;
-    border-top: 1px solid rgba(26, 32, 44, 0.1);
-}
-
-body.light-theme .footer-links a {
-    color: #4a5568;
-}
-
-body.light-theme .footer-links a:hover {
-    color: #00d4ff;
-}
-
 /* Navigation */
 nav {
     position: fixed;
@@ -110,22 +31,27 @@ nav.scrolled {
 }
 
 .nav-container {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 2rem;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #00d4ff, #7c3aed);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-decoration: none;
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -133,25 +59,6 @@ nav.scrolled {
     list-style: none;
     gap: 2rem;
     align-items: center;
-}
-
-.theme-toggle {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    padding: 8px 16px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.theme-toggle:hover {
-    border-color: #00d4ff;
-    transform: translateY(-2px);
 }
 
 .nav-links a {
@@ -203,8 +110,8 @@ nav.scrolled {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: space-between;
+    padding: 0 2rem;
     overflow: hidden;
 }
 
@@ -232,10 +139,27 @@ nav.scrolled {
 }
 
 .hero-content {
-    text-align: center;
+    flex: 1;
     z-index: 2;
-    max-width: 800px;
-    padding: 0 2rem;
+    max-width: 50%;
+    text-align: start;
+}
+
+.banner-image {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+    align-items: baseline;
+}
+
+.hero-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .hero h1 {
@@ -259,7 +183,7 @@ nav.scrolled {
 .cta-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     animation: fadeInUp 1s ease-out 0.4s both;
 }
@@ -419,7 +343,7 @@ footer {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-links {
         display: none;
     }
@@ -464,7 +388,7 @@ footer {
 
     .cta-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: start;
     }
 
     .section-title {
